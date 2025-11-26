@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rit details</title>
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
+    body {
+      font-family: 'Roboto Slab', serif;
+      margin: 0;
+      background-color: #f6f6f6;
+      color: #333;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 220px;
+      background-color: #333;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      color: white;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.15);
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .sidebar nav {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #6e6b74;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      margin-left: 240px; /* ruimte voor sidebar */
+      padding: 20px;
+      max-width: 950px;
+    }
+
+    /* BOVENBALK */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      background-color: #66656f;
+      color: white;
+      font-weight: bold;
+      height: 48px;
+      border-radius: 6px 6px 0 0;
+      overflow: hidden;
+    }
+
+    .time {
+      background-color: #66656f;
+      padding: 12px 16px;
+      font-size: 1rem;
+    }
+
+    .delay {
+      background-color: #b1b1b1;
+      color: white;
+      padding: 12px 16px;
+      font-size: 1rem;
+    }
+
+    .train-info {
+      background-color: #9ed3c1;
+      color: white;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      font-size: 0.9rem;
+    }
+
+    .train-number {
+      background-color: #66656f;
+      color: white;
+      padding: 12px 16px;
+      font-weight: bold;
+    }
+
+    /* BESTEMMING */
+    .destination-box {
+      background-color: #e2e2e2;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    /* ROUTE */
+    .route {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 1.1rem;
+    }
+
+    .route strong {
+      font-weight: 700;
+    }
+
+    /* WAGENS */
+    .wagons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .wagon {
+      flex: 1 1 200px;
+      background-color: #d9d9d9;
+      border-radius: 4px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 120px;
+    }
+
+    .wagon .top {
+      padding-top: 25px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .wagon .bottom {
+      background-color: #66656f;
+      color: white;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      border-radius: 0 0 4px 4px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Midi Proto</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="scherm1.html">Bestemming</a>
+      <a href="scherm2.html">Overzicht ritten</a>
+      <a href="scherm3.html">Rit details</a>
+    </nav>
+  </aside>
+  
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <!-- BOVENBALK -->
+    <div class="topbar">
+      <div class="time">18:14</div>
+      <div class="delay">5 min vertraging</div>
+      <div class="train-info">Treinnummer/soort</div>
+      <div class="train-number">nr. 5</div>
+    </div>
+
+    <!-- BESTEMMING -->
+    <div class="destination-box">
+      Voeren/Fourons
+    </div>
+
+    <!-- ROUTE -->
+    <div class="route">
+      <strong>Beginhalte</strong> &gt; xxxx &gt; xxxx &gt; xxxx &gt; xxxx &gt; xxxx &gt; xxxx &gt; xxxx &gt; <strong>eindhalte</strong>
+    </div>
+
+    <!-- WAGENS -->
+    <div class="wagons">
+      <div class="wagon">
+        <div class="top">W. 1</div>
+        <div class="bottom">Klasse 1</div>
+      </div>
+      <div class="wagon">
+        <div class="top">W. 2</div>
+        <div class="bottom">Klasse 2</div>
+      </div>
+      <div class="wagon">
+        <div class="top">W. 3</div>
+        <div class="bottom">Klasse 2</div>
+      </div>
+      <div class="wagon">
+        <div class="top">W. 4</div>
+        <div class="bottom">Klasse 3</div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Bachot Hayley – Midi prototypes</p>
+    </footer>
+  </div>
+</body>
+</html>
