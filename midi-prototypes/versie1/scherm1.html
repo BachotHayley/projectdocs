@@ -16,6 +16,7 @@
     }
 
     .header-time {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,6 +25,19 @@
       font-size: 3rem;
       font-weight: 700;
       height: 100px;
+    }
+
+    .home-btn {
+      position: absolute;
+      left: 20px;
+      width: 44px;
+      height: 44px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
 
     .schedule {
@@ -114,7 +128,21 @@
 </head>
 
 <body>
-  <div class="header-time">18:14</div>
+ <div class="header-time">
+  <a href="../index.html" class="home-btn" aria-label="Home">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.9897 20.9982H19.0001V12H21.0001L12.0001 3L3.04309 12H5.00006V20.9982H10.0001
+        M13.9897 20.9982L13.9988 14.0013C13.9994 13.4885 13.6139 13.0653 13.1167 13.0069L11.0001 13
+        C10.4478 13 10.0001 13.4477 10.0001 14V20.9982
+        M13.9897 20.9982H10.0001"
+        stroke="white" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+
+  18:14
+</div>
 
   <div class="schedule">
     <div class="row">
@@ -183,7 +211,7 @@
     </div>
 
     <footer>
-      <p>© 2025 Bachot Hayley – Midi prototypes</p>
+      <p>© Bachot Hayley – GDM1</p>
     </footer>
   </div>
 </body>

@@ -3,70 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Midi Prototypes – Navigatie</title>
+  <title>Prototypes – Navigatie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 50px 20px;
+      padding: 0;
     }
 
-    h1 {
-      font-size: 2rem;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #cfeee3, #f7f7f7);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #333;
-      margin-bottom: 30px;
     }
 
-    .nav-container {
+    .container {
+      background-color: #ffffff;
+      max-width: 450px;
+      width: 90%;
+      padding: 50px 35px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #2f6f5f;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 35px;
+    }
+
+    nav {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      max-width: 400px;
-      margin: 0 auto;
+      gap: 18px;
     }
 
     .nav-btn {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      background-color: #9ed3c1;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 16px;
-      border-radius: 10px;
-      transition: 0.2s;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #9ed3c1, #7bb8a8);
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 16px 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
     }
 
     .nav-btn:hover {
-      background-color: #7bb8a8;
-      transform: translateY(-2px);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #7bb8a8, #9ed3c1);
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #666;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 40px 20px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .nav-btn {
+        font-size: 1rem;
+        padding: 14px 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Midi Prototypes – Navigatie</h1>
+  <div class="container">
+    <header>
+      <h1>Prototypes</h1>
+      <p>Selecteer een versie om te bekijken en vergelijk de vooruitgang</p>
+    </header>
 
-  <div class="nav-container">
-    <!-- Versie 1 -->
-    <a href="versie1/index.html" class="nav-btn">Versie 1</a>
+    <nav>
+      <a href="versie1/index.html" class="nav-btn">Versie 1</a>
+      <a href="versie2/index.html" class="nav-btn">Versie 2</a>
+      <a href="definitieve_versie/index.html" class="nav-btn">Definitieve versie</a>
+    </nav>
 
-    <!-- Navigatiebalk toegevoegd -->
-    <a href="versie2/index.html" class="nav-btn">Versie 2</a>
+    <footer>
+      © Bachot Hayley - GDM1
+    </footer>
   </div>
-
-  <footer>
-    © 2025 Bachot Hayley
-  </footer>
 
 </body>
 </html>
